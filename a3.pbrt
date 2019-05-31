@@ -30,16 +30,6 @@ AttributeEnd
 
 
 AttributeBegin
-  Texture "checker1" "color" "checkerboard"
-  	"string mapping" ["uv"]
-  	"float uscale" [8.0]
-  	"float vscale" [8.0]
-	"color tex1" [1.0, 1.0, 0.0]
-	"color tex2" [1.0, 0.0, 0.0]
-  Texture "tmap1" "color" "wood"
-	"float ringscale" [0.1]
-  #Material "matte" "texture Kd" ["checker1"]
-  
   Material "plastic" "color Kd" [.5 .5 .5] "color Ks" [.5 .5 .5]
 	"float roughness" [.0]
 
@@ -55,8 +45,7 @@ AttributeEnd
 AttributeBegin
 Scale 0.5 0.5 0.5
 Rotate 0 0 0 1
-Material "plastic" "color Kd" [.5 .5 .5] "color Ks" [.5 .5 .5]
-	"float roughness" [.0]
+Material "mirror"
 Translate 200 200 -140
 	Shape "sphere" 
 		"float radius" [100]
