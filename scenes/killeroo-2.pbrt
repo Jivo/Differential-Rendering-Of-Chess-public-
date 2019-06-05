@@ -1,0 +1,32 @@
+
+LookAt 400 20 30   0 63 -110   0 0 1
+Rotate -5 0 0 1
+Camera "perspective" "float fov" [39]
+Film "image"
+"integer xresolution" [700] "integer yresolution" [700]
+    "string filename" "killeroo-simple2.png"
+
+# zoom in by feet
+# "integer xresolution" [1500] "integer yresolution" [1500]
+#	"float cropwindow" [ .34 .49  .67 .8 ]
+
+Sampler "halton" "integer pixelsamples" [100]
+
+Integrator "mask"
+
+WorldBegin
+
+AttributeBegin
+Scale .5 .5 .5
+Rotate -60 0 0 1
+    Material "plastic" "color Kd" [1 1 1] "color Ks" [0 0 0]
+        "float roughness" [0]
+Translate 100 200 -140
+    Include "geometry/killeroo.pbrt"
+    Material "plastic" "color Ks" [0 0 0] "color Kd" [1 1 1]
+        "float roughness" [0]
+Translate -200 0 0
+    Include "geometry/killeroo.pbrt"
+
+AttributeEnd
+WorldEnd
