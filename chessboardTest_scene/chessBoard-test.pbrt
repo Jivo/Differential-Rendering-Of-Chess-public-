@@ -1,0 +1,26 @@
+LookAt 0.114 22.416 -24.669   0.11662 21.75606 -23.91768   0 0 1
+
+Camera "perspective" "float fov" [37.36]
+Film "image"  
+"integer xresolution" [960] "integer yresolution" [540]
+    "string filename" "killeroo-simple.png"
+
+BackgroundImage "bg.png"
+
+Sampler "halton" "integer pixelsamples" [30]
+Integrator "path"
+
+WorldBegin
+
+AttributeBegin
+LightSource "infinite" "string mapname" ["lightmap.exr"]
+AttributeEnd
+
+
+AttributeBegin
+Scale -1 1 1
+#Shape "plymesh" "string filename" "geometry/scene.ply"
+
+Include "both.pbrt"
+AttributeEnd
+WorldEnd
