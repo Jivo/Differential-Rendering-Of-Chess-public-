@@ -1,0 +1,45 @@
+LookAt 0 0 0   1 0 0   0 1 0
+
+Camera "perspective" "float fov" [25.525]
+Film "image"  
+"integer xresolution" [960] "integer yresolution" [540]
+    "string filename" "killeroo-simple.png"
+
+BackgroundImage "bg.png"
+
+Sampler "halton" "integer pixelsamples" [30]
+Integrator "path"
+
+WorldBegin
+
+AttributeBegin
+TransformBegin
+  Rotate 180 0 0 1  #Original was 180
+  Rotate 90 1 0 0  #Original was 90
+  LightSource "infinite" "string mapname" ["lightmap.exr"] "rgb L" [0.8 0.8 0.8]
+TransformEnd
+AttributeEnd
+
+Scale 1 1 -1
+
+AttributeBegin
+   Include "local_plane.pbrt"
+   
+   #Material "uber" "rgb Kr" [3 3 3] 
+       #"rgb Ks" [-1 -1 -1]
+       #"rgb Kt" [0.5 0.5 0.5]
+       #"float roughness" [0.1] 
+       #"rgb Kd" [0 0 0] 
+       #"float uroughness" [0.7] 
+       #"float vroughness" [0.7]
+	   
+   Material "plastic" "rgb Kd" [0 0 0]
+       "rgb Ks" [0.35 0.35 0.37]
+	   "float roughness" 0.000
+   
+   Include "blackPieces.pbrt"
+   Include "whitePieces.pbrt"
+   
+AttributeEnd
+
+WorldEnd
