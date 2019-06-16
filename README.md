@@ -21,7 +21,7 @@ https://github.com/gabrielweta/CGRA408_A3
 This folder contains a modified version of pbrt-v3 which can render a scene using differential rendering.
 Setup: compile in the usual way as described in pbrt-v3/README.md.  For more information see Final Report  submitted by Brandon Muller
 
-###./textures
+####./textures
 This folder contains the IBLs created for replicating the light environment of CGRA's Lab, where the chess pieces where 
 photographed.  For more information see report submitted by Gabriel Salas.
 
