@@ -6,7 +6,7 @@
 
 ### Team members:
 - Brandon Muller - mullerbran@myvuw.ac.nz
-- Gabriel Salas - salasgabr@myvuw.ac.nz
+- Gabriel Salas - salasgabr@myvuw.ac.nz (contact person)
 - Josh Weir - weirjosh@myvuw.ac.nz
 
 ### Location of contents
@@ -28,6 +28,9 @@ photographed.  For more information see report submitted by Gabriel Salas.
 #### ./Scene Files
 This folder contains the PBRT scene description file, and the script used for creating the pbrt files that generate each frame of the video.
 For more information see readme file inside, and report submitted by Josh Weir.
+
+#### ./frames
+This folder contains the images resulting from each pbrt file generated.
 
 #### ./video
 This folder contains the resulting video.  This video was assembled in Adobe Premiere by combining all images generated
