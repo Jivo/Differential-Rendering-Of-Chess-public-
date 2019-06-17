@@ -1,7 +1,7 @@
 # Scene Files
 
 ## Requirements
- - An executable of the modified pbrt needs to be placed in this folder in order to run *sceneFile.pbrt*.
+ - An executable of the modified pbrt needs to be built for the current OS, and placed in this folder in order to run *sceneFile.pbrt*.
  - obj2pbrt executable must be in this folder, and unzip *properScebe.mb* in order to run the animation script *amimationScript.py* in Maya.
  
  ## Running
