@@ -25,7 +25,7 @@ Setup: compile in the usual way as described in pbrt-v3/README.md.  For more inf
 This folder contains the IBLs created for replicating the light environment of CGRA's Lab, where the chess pieces where 
 photographed.  For more information see report submitted by Gabriel Salas.
 
-#### ./Final System (for realsies)
+#### ./Scene Files
 This folder contains the script used for creating the pbrt files that generate each frame of the video.
 For more information see report submitted by Josh Weir.
 
