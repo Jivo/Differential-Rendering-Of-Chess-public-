@@ -26,7 +26,7 @@ This folder contains the IBLs created for replicating the light environment of C
 photographed.  For more information see report submitted by Gabriel Salas.
 
 #### ./Scene Files
-This folder contains the script used for creating the pbrt files that generate each frame of the video.
+This folder contains the PBRT scene description file, and the script used for creating the pbrt files that generate each frame of the video.
 For more information see report submitted by Josh Weir.
 
 #### ./video
