@@ -1,0 +1,64 @@
+LookAt 0 0 0   1 0 0   0 1 0
+
+Camera "perspective" "float fov" [25.525]
+Film "image"  
+"integer xresolution" [960] "integer yresolution" [540]
+    "string filename" "killeroo-simple.png"
+
+BackgroundImage "bg.png"
+
+Sampler "halton" "integer pixelsamples" 128
+Integrator "path"
+
+WorldBegin
+
+AttributeBegin
+TransformBegin
+  Rotate -90 1 0 0  #Original was 90
+  Rotate -45 0 0 1  #Original was 180
+  LightSource "infinite" "string mapname" ["labIBL_test.exr"] "rgb L" [50 50 50]
+TransformEnd
+AttributeEnd
+
+Scale 1 1 -1
+
+AttributeBegin
+   
+   Texture "check" "spectrum" "checkerboard"
+   "float uscale" [8] "float vscale" [8]
+   "rgb tex2" [.99 .59 .03] "rgb tex1" [.15 .013 .00]
+   Material "plastic" "texture Kd" "check" "float roughness" 0.25 "rgb Ks" [0.3 0.3 0.3] "bool remaproughness" "false"
+   Include "board.pbrt"
+   
+   Material "matte" "rgb Kd" [1 1 1]
+   Include "table.pbrt"
+	   
+   Material "plastic" "rgb Kd" [0 0 0]
+       "rgb Ks" [0.03 0.03 0.05]
+       #"rgb Ks" [0.3 0.3 0.3]
+	   "float roughness" 0.12
+	   "bool remaproughness" "false"
+   
+   Include "blackPieces.pbrt"
+   
+  AttributeBegin
+  TransformBegin
+    Rotate -90 1 0 0  #Original was 90
+    Rotate -45 0 0 1  #Original was 180
+    LightSource "infinite" "string mapname" ["labIBL_stronger_spotlight.exr"] "rgb L" [0.7 0.7 0.7]
+  TransformEnd
+  AttributeEnd
+   
+   
+   Material "plastic" 
+       "rgb Kd" [.53 .25 .03]
+       #"texture Kd" "dirt"
+       "rgb Ks" [0.1 0.1 0.1]
+	   "float roughness" 0.25
+	   "bool remaproughness" "false"
+	   
+   Include "whitePieces.pbrt"
+   
+AttributeEnd
+
+WorldEnd
