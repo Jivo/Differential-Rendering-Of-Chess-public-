@@ -27,7 +27,7 @@ photographed.  For more information see report submitted by Gabriel Salas.
 
 #### ./Scene Files
 This folder contains the PBRT scene description file, and the script used for creating the pbrt files that generate each frame of the video.
-For more information see report submitted by Josh Weir.
+For more information see readme file inside, and report submitted by Josh Weir.
 
 #### ./video
 This folder contains the resulting video.  This video was assembled in Adobe Premiere by combining all images generated
