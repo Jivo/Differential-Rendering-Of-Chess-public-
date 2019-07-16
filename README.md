@@ -17,7 +17,7 @@ https://github.com/gabrielweta/CGRA408_A3
 
 ### Contents:
 
-#### ./CMIC Presentation.pdf:
+#### ./CMIC presentation.pdf:
 A brief summary of the project, and the process undergone to complete it.
 
 #### ./pbrt-v3
